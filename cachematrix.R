@@ -1,8 +1,5 @@
-## Put comments here that give an overall description of what your
-## functions do
 
-## Write a short comment describing this function
-
+#call this function first with square matrix or use set
 makeCacheMatrix <- function(x = matrix()) {
 
   m_inverse <- NULL
@@ -17,11 +14,7 @@ makeCacheMatrix <- function(x = matrix()) {
        setinverse = setinverse,
        getinverse = getinverse)
 }
-
-
-
-## Write a short comment describing this function
-
+#should be called to cache the inverse of the matrix
 cacheSolve <- function(x, ...) {
     mi<- x$getinverse()
     if(!is.null(mi)) {
@@ -32,5 +25,4 @@ cacheSolve <- function(x, ...) {
     mi <- solve(data, ...)
     x$setinverse(mi)
     mi
-
 }
